@@ -21,3 +21,9 @@
 * no esperan son algunos eventos  van a parar las peticiòn a servidoresç
 * interacciones visuales,navegaciòn  clientside, los eventos que se realizan cierto tiempo. 
 
+** Secrets of understanding Node js
+
+* JS enviroment browser/server
+* understanding functions/ callbacks functions
+* Event loop 
+* asynchronous (Non-blocking) vs synchronous (bloking)
