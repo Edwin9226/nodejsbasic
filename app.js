@@ -1,11 +1,13 @@
 const { sum } = require('./helpers');
-const http = require('http');
 
-const server = http.createServer((req, res) => {
-    res.end("Hello world from node js!");
-})
+const express = require('express');
+const app = express();
 
-server.listen(3000);
+app.get('/', (req, res) => {
+    res.send("hey whas up")
+});
+
+app.listen(3000);
 // var let const
 const total = sum(10, 200);
 console.log("Total:", total);
