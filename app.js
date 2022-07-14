@@ -17,13 +17,18 @@ const fileName = "target.txt"
 
 // fs.watch(fileName, () => console.log("File changed!"));
 
-const data = fs.readFileSync(fileName);
-console.log(data.toString());
-// fs.readFile(fileName, (err, data) => {
-//     if (err) {
-//         console.log(err)
-//     }
-//     console.log(data.toString())
-// })
+//syncronous programing
+// const data = fs.readFileSync(fileName);
+// console.log(data.toString());
+
+//Functional Approach
+const errHandler = err => console.log(err);
+const dataHandler = data => console.log(data.toString());
+
+fs.readFile(fileName, (err, data) => {
+    if (err) errHandler(err);
+
+    dataHandler(data);
+})
 
 console.log("Node js Async programing.")
